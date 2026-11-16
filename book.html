@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a visit  -  Herman Overstreet, Handyman  -  Concord &amp; Charlotte, NC</title>
+  <meta name="description" content="Demo booking page for Herman Overstreet. Real booking will use Square Appointments.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-phone-bar">
+      <a href="tel:+17045550100">[Phone: (704) 555-0100 placeholder]</a>
+    </div>
+    <div class="header-inner">
+      <a class="wordmark" href="index.html">
+        <span class="wordmark-name">Herman Overstreet</span>
+        <span class="wordmark-tag">Handyman · Concord &amp; Charlotte, NC</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="project.html">Projects</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="book.html" aria-current="page">Book</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-cta btn-header" href="quote.html">Get a Free Quote</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <div class="wrap">
+      <div class="page-intro">
+        <span class="eyebrow">Booking</span>
+        <h1>Pick a time to visit</h1>
+        <p>This is a mock booking screen so you can see how it would feel. Real booking will use Square Appointments, including a Book button on Herman's Google listing. Dates and times below are examples only  -  not real availability.</p>
+      </div>
+      <div class="book-layout">
+        <div class="book-panel">
+          <h2>1. Choose a service</h2>
+          <div class="field">
+            <label for="book-service">Service</label>
+            <select id="book-service" name="book-service">
+              <option value="">Choose a service</option>
+              <option>Drywall repair</option>
+              <option>Door and lock fixes</option>
+              <option>Fixture and fan install</option>
+              <option>TV mounting</option>
+              <option>Furniture assembly</option>
+              <option>Minor plumbing</option>
+              <option>Minor electrical</option>
+              <option>Deck and fence repair</option>
+              <option>Painting touch-ups</option>
+              <option>Other / not sure</option>
+            </select>
+          </div>
+          <p class="book-summary" id="book-summary"></p>
+        </div>
+        <div class="book-panel">
+          <h2>2. Choose a day and time</h2>
+          <div class="week-nav">
+            <button type="button" id="prev-week" aria-label="Previous week">‹</button>
+            <h3 id="week-label">[Week of Nov 16, 2026 - example dates only]</h3>
+            <button type="button" id="next-week" aria-label="Next week">›</button>
+          </div>
+          <div class="day-row" id="day-row"></div>
+          <p class="field-label">Example time slots</p>
+          <div class="slots" id="slots"></div>
+          <div class="btn-row">
+            <button class="btn btn-primary" type="button" id="book-confirm">Request this time</button>
+          </div>
+          <p class="form-note" id="book-demo-note" tabindex="-1">Demo only. Real booking will use Square Appointments, and these times are not Herman's actual calendar.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-name">Herman Overstreet</p>
+        <p><span class="placeholder">[Business Name: Overstreet Handyman Services?]</span></p>
+        <p>Serving Concord and Charlotte, NC</p>
+        <p><span class="placeholder">[Hours placeholder]</span></p>
+        <p><span class="placeholder">[Email placeholder]</span></p>
+        <p><span class="placeholder">[License/insurance: TBD]</span></p>
+      </div>
+      <div class="footer-links">
+        <a href="tel:+17045550100">[Phone: (704) 555-0100 placeholder]</a>
+        <a href="quote.html">Get a Free Quote</a>
+        <a href="book.html">Book a visit</a>
+        <a href="services.html">Services</a>
+        <a href="project.html">Projects</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="mockup-badge">Mockup - placeholder content</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
