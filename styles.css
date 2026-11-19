@@ -330,7 +330,7 @@ p + p { margin-top: 0.85rem; }
   max-width: 34rem;
 }
 
-.hero-photo {
+.hero-grid .hero-photo {
   aspect-ratio: 4 / 3;
 }
 
@@ -782,7 +782,7 @@ p + p { margin-top: 0.85rem; }
     align-items: stretch;
   }
 
-  .hero-photo {
+  .hero-grid .hero-photo {
     aspect-ratio: auto;
     height: 100%;
     min-height: 16rem;
@@ -1137,4 +1137,270 @@ p + p { margin-top: 0.85rem; }
 .placeholder {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+
+/* ---------- Real photos: hero, pairs, gallery ---------- */
+
+.hero-photo {
+  position: relative;
+  padding: 0;
+  border-bottom: 0;
+  color: #f6f3ee;
+  overflow: visible;
+  aspect-ratio: auto;
+}
+
+.hero-media {
+  display: block;
+  aspect-ratio: 4 / 3;
+  background: #1c1b18;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% 42%;
+  display: block;
+}
+
+.hero-overlay {
+  background: #1c1b18;
+  color: #f6f3ee;
+  padding: 1.6rem 0 1.85rem;
+}
+
+.hero-photo .hero-copy {
+  max-width: 40rem;
+}
+
+.hero-photo .eyebrow,
+.hero-photo h1,
+.hero-photo .lede,
+.hero-photo .hero-caption,
+.hero-photo .trust-strip {
+  color: #f6f3ee;
+}
+
+.hero-photo .lede {
+  color: #e8e4dc;
+}
+
+.hero-photo .placeholder,
+.hero-photo .placeholder-on-dark {
+  background: rgba(255, 255, 255, 0.16);
+  color: #f6f3ee;
+}
+
+.hero-photo .btn-primary {
+  background: #f6f3ee;
+  color: #1e382c;
+  border-color: #f6f3ee;
+}
+
+.hero-photo .btn-primary:hover {
+  background: #fff;
+  color: #1e382c;
+}
+
+.hero-photo .btn-secondary {
+  color: #f6f3ee;
+  border-color: #f6f3ee;
+}
+
+.hero-photo .btn-secondary:hover {
+  background: #f6f3ee;
+  color: #1e382c;
+}
+
+.hero-photo .hero-caption {
+  margin-top: 1.1rem;
+}
+
+.hero-photo .hero-caption a {
+  color: #f6f3ee;
+}
+
+.hero-photo h1 {
+  font-size: clamp(2.15rem, 6.4vw, 3.85rem);
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+  margin-bottom: 1rem;
+}
+
+/* Desktop: photo is a full-bleed backdrop with a left scrim and text over it */
+@media (min-width: 800px) {
+  .hero-photo {
+    min-height: 34rem;
+    display: grid;
+    padding: 0;
+    overflow: hidden;
+    aspect-ratio: auto;
+  }
+
+  .hero-media,
+  .hero-overlay {
+    grid-area: 1 / 1;
+  }
+
+  .hero-media {
+    aspect-ratio: auto;
+    min-height: 36rem;
+    height: 100%;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(16, 18, 14, 0.88) 0%,
+      rgba(16, 18, 14, 0.72) 38%,
+      rgba(16, 18, 14, 0.28) 62%,
+      rgba(16, 18, 14, 0.08) 100%
+    );
+    padding: 3.75rem 0 3.25rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-photo .hero-copy {
+    max-width: 30rem;
+  }
+}
+
+/* Before/after photo frames */
+.ba-split-photo {
+  margin-top: 0.5rem;
+}
+
+.ba-frame {
+  position: relative;
+  overflow: hidden;
+  background: #2a2a28;
+}
+
+.ba-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ba-frame-43 {
+  aspect-ratio: 4 / 3;
+}
+
+.ba-panel figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+  color: #5a564e;
+}
+
+/* Bathroom pair: never upscale the 450x600 before shot */
+.ba-split-native {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.ba-split-native .ba-panel {
+  width: 100%;
+  max-width: 450px;
+}
+
+.ba-frame-native {
+  aspect-ratio: auto;
+  background: #d5d0c8;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.ba-frame-native img {
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+  max-height: 600px;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.more-photos {
+  margin-top: 1.5rem;
+  padding: 2rem 1.15rem;
+  text-align: center;
+  border: 1px dashed #c4bfb6;
+  background: #fffcf8;
+  color: #5a564e;
+  font-size: 0.95rem;
+}
+
+.gallery-frame {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #d5d0c8;
+}
+
+.gallery-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.gallery-frame-bath img {
+  object-position: 28% 68%;
+}
+
+.gallery-item figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+  color: #5a564e;
+}
+
+.gallery-item {
+  margin: 0;
+  min-width: 0;
+}
+
+
+/* Outside too — rear porch on the landing page */
+.outside-feature {
+  display: grid;
+  gap: 0.85rem 2rem;
+  margin-top: 2rem;
+}
+
+.outside-feature-copy h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.45rem;
+}
+
+.outside-feature-copy p {
+  margin-top: 0;
+  max-width: 28rem;
+  color: #3a3832;
+}
+
+.outside-shot {
+  margin: 0;
+  min-width: 0;
+}
+
+.outside-shot figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+  color: #5a564e;
+}
+
+@media (min-width: 800px) {
+  .outside-feature {
+    grid-template-columns: minmax(12rem, 0.65fr) minmax(0, 1.35fr);
+    align-items: start;
+    margin-top: 2.25rem;
+  }
 }
