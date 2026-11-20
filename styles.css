@@ -456,6 +456,60 @@ p + p { margin-top: 0.85rem; }
   font-size: 1.25rem;
 }
 
+
+.service-featured {
+  border-width: 2px;
+  border-color: #2a4a3c;
+  padding: 1.35rem 1.2rem 1.45rem;
+}
+
+.service-featured h2 {
+  font-size: 1.4rem;
+}
+
+.service-photo-placeholder {
+  margin-top: 0.9rem;
+  aspect-ratio: 16 / 9;
+  max-width: 32rem;
+  min-height: 10rem;
+}
+
+.job-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+  color: #3a3832;
+  font-size: 0.98rem;
+}
+
+.job-list li {
+  margin: 0.2rem 0;
+}
+
+.card .job-list {
+  font-size: 0.95rem;
+}
+
+.schedule-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 16rem;
+  padding: 1.5rem;
+  background: #ece6da;
+  border: 1px dashed #8a8578;
+  color: #3a3832;
+  font-size: 1rem;
+  line-height: 1.45;
+  margin-bottom: 1rem;
+}
+
+.schedule-placeholder p {
+  max-width: 24rem;
+  margin: 0;
+}
+
+
 /* ---------- Gallery ---------- */
 
 .gallery-grid {
